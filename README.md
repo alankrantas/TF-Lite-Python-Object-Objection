@@ -1,11 +1,11 @@
-# TF Lite (Python) Object Detection
+# Object Detection Examples With Tensorflow Lite and OpenCV (Python)
 
-Running pre-trained TF Lite models for object detection. You either have to install Tehsorflow or Tensorflow Lite (```tflite_runtime```), and these scripts run a lot faster on a ARM device, for example, a Raspberry Pi 3B or 4B.
+Running pre-trained TF Lite models for object detection. You either have to install Tehsorflow or Tensorflow Lite (```tflite_runtime```) and OpenCV (```opencv-python```). These scripts also run a lot faster on a ARM device, for example, a Raspberry Pi 3B or 4B.
 
 There are three models available here (downloaded from Google):
 
-* SSD-MobileNet v1
-* EfficientNet-lite0
+* SSD-MobileNet V1
+* EfficientDet-Lite0
 * YOLO V5
 
 All three are trained with the COCO dataset (```labelmap.txt``` is the label list). This is mainly a demostration of how to get the possible things as well as their location from the model.
