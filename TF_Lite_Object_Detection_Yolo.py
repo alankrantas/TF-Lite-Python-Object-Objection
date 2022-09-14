@@ -90,7 +90,12 @@ for indice in indices:
     cv2.putText(img_padded, label, (x, y), cv2.FONT_HERSHEY_SIMPLEX, LABEL_SIZE, text_color, 1)
 
 img_show = img_padded[y_pad: IMG_HEIGHT - y_pad, x_pad: IMG_WIDTH - x_pad]
+cv2.namedWindow('Object detection', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('Object detection',
+                 1024 if IMG_WIDTH > IMG_HEIGHT else round(1024 * IMG_WIDTH / IMG_HEIGHT),
+                 1024 if IMG_HEIGHT > IMG_WIDTH else round(1024 * IMG_HEIGHT / IMG_WIDTH))
 cv2.imshow('Object detection', img_show)
 cv2.imwrite('./result.jpg', img_show)
+cv2.imwrite('./result_yolo.jpg', img_show)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

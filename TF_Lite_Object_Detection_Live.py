@@ -4,8 +4,8 @@ LABEL_MAP = './labelmap.txt'
 THRESHOLD = 0.5
 RUNTIME_ONLY = True
 
-IMG_WIDTH = 320
-IMG_HEIGHT = 240
+IMG_WIDTH = 640
+IMG_HEIGHT = 480
 LABEL_SIZE = 0.5
 
 import cv2
